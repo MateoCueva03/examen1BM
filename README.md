@@ -4,4 +4,5 @@
 
 Integrantes: 
 - Cueva Mateo
+- Kevin Pulupa
 
