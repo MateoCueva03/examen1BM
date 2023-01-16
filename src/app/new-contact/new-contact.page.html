@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Crear contacto</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" (click)="dismissModal()">
+        Cancelar
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" [disabled]="!createContactForm.valid" (click)="submitForm()">
+        Agregar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-thumbnail class="user-image">
+    <img src="/assets/avatar.png">
+  </ion-thumbnail>
+
+
+  <form [formGroup]="createContactForm" #createForm="ngForm" (ngSubmit)="createContact(createContactForm.value)">
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Nombre" inputMode="text" clearInput="true" formControlName="firstName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Apellido" inputMode="text" clearInput="true" formControlName="lastName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Correo eletrónico" inputMode="email" clearInput="true" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Número" inputMode="tel" clearInput="true" formControlName="phone" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Parentesco</ion-label>
+        <ion-select placeholder="Selecciona una" formControlName="category">
+          <ion-select-option value="Familia">Familia</ion-select-option>
+          <ion-select-option value="Amigo">Amigo</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
