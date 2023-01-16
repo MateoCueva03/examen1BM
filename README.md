@@ -1,11 +1,7 @@
-# censoInec
+# Login-CRUD-Splash Screen en Ionic
 
-## App Censo | Prueba 50%
+## App Gestión contactos | Examen 1BM
 
 Integrantes: 
 - Cueva Mateo
-- Tuquerres Marlon
-- Tandazo Bryan
-- Pulupa Kevin
-- 
-link del video: https://youtu.be/adlUacMXRwc
+
